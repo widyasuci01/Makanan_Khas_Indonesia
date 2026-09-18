@@ -1,0 +1,49 @@
+/* Mengatur agar semua kotak berjejer rapi di tengah halaman */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;             /* Agar otomatis berpindah ke bawah jika layar sempit */
+    justify-content: center;     /* Mengetengahkan posisi kotak-kotak */
+    gap: 70px;                   /* Jarak antar kotak */
+    padding: 30px;
+}
+
+/* Mengatur desain fisik Kotak (Card) */
+.card {
+    background-color: #f0f0f0;  /* Warna dasar kotak */
+    width: 800px;                /* Lebar kotak */
+    border-radius: 12px;         /* Membuat sudut kotak jadi melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20); /* Efek bayangan agar terlihat timbul */
+    overflow: hidden;            /* Memastikan gambar tidak melebihi batas sudut melengkung */
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translate(-10px) scale(1.02); /*terangkat dan membesar ke atas */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.30); /*bayangan menebal*/
+}
+
+/* Mengatur gambar di dalam kotak agar pas */
+.card img {
+    width: 100%;                 /* Gambar menyesuaikan lebar kotak */
+    height: 400px;               /* Tinggi gambar disamakan */
+    object-fit: cover;           /* Gambar terpotong rapi tanpa gepeng */
+}
+
+/* Mengatur isi teks di dalam kotak */
+.card-content {
+    padding: 15px 25px;          /* Jarak antara teks dengan pinggiran kotak */
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card-content p {
+    color: #272727;
+    line-height: 1.5;
+}
+
+body {
+    background-color: rgb(215, 245, 245);
+}
